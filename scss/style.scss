@@ -1,0 +1,1036 @@
+//====common css====//
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clr {
+    clear: both;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.mr-m-tp {
+    margin-top: 77px !important;
+}
+
+.mr-lest-tp {
+    margin-top: 110px !important;
+}
+
+body {}
+
+/*color variables*/
+$cosmic-Latte: #EBF9F4;
+$black:#000000;
+$charcoal:#484848;
+$dim-gray:#707070;
+$night-rider:#333333;
+$seagull:#6EABD3;
+$white:#ffffff;
+$eclipse:#393939;
+$nobel:#999999;
+$nero:#1d1d1d;
+$blue-chill:#159588;
+$gray:#8A8A8A;
+$fire-bush:#E28538;
+$soft-peach:#F7EFEF;
+
+/*transition variables*/
+@mixin tr($time) {
+    -webkit-transition: all linear $time;
+    -moz-transition: all linear $time;
+    -ms-transition: all linear $time;
+    -o-transition: all linear $time;
+    transition: all linear $time;
+}
+
+/*radius variables*/
+@mixin br($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/*radius variables*/
+@mixin border-radius-top-right($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    -ms-border-top-right-radius: $radius;
+    -o-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+
+
+//=========navbar part css=======//
+.navbar {
+    background: $cosmic-Latte;
+    position: absolute;
+    width: 100%;
+    padding-top: 45px;
+
+    .navbar-brand {}
+
+    .navbar-nav {
+        position: absolute;
+        right: 70px;
+        top: 35px;
+
+        .nav-item {
+            .nav-link {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                background: $blue-chill;
+                @include br(40px);
+                width: 100px;
+            }
+        }
+    }
+}
+
+//=========banner part css=======//
+#banner {
+    background: $cosmic-Latte;
+    padding-top: 160px;
+    padding-bottom: 80px;
+
+    .banner-input {
+
+        h3 {
+            font-size: 53px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 40px;
+        }
+
+        .banner-input-box {
+            position: relative;
+
+            input {
+                height: 78px;
+                width: 98%;
+                @include br(42px);
+                border: 1px solid $black;
+                padding-left: 110px;
+                background: $cosmic-Latte;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                padding-right: 35px;
+
+                &::placeholder {
+                    font-size: 20px;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    color: $charcoal;
+                    font-weight: 300;
+                    font-style: italic;
+
+                }
+            }
+
+            button {
+                position: absolute;
+                top: 28px;
+                left: 40px;
+                background-color: transparent;
+                cursor: pointer;
+
+                i {
+                    font-size: 25px;
+                    color: $black;
+                }
+
+                &::after {
+                    position: absolute;
+                    top: -10px;
+                    right: -25px;
+                    width: 1px;
+                    height: 42px;
+                    content: '';
+                    background: rgba(0, 0, 0, 0.21);
+                }
+            }
+        }
+    }
+
+    .banner-items {
+        padding-top: 45px;
+
+        h3 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-size: 33px;
+            padding-top: 10px;
+        }
+    }
+
+    .video-play {
+        padding-top: 70px;
+
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+
+        a {}
+    }
+}
+
+//=========explore part css=======//
+#explore {
+    background: $cosmic-Latte;
+    padding-top: 70px;
+    padding-bottom: 155px;
+
+    .explore-header {
+        h3 {
+            font-size: 53px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: $night-rider;
+            margin-bottom: 20px;
+        }
+    }
+
+    .explore-items {
+        background: $seagull;
+        @include br(10px);
+        filter: drop-shadow(0px 0px 7px rgba(112, 112, 112, 0.8));
+
+        img {
+            width: 100%;
+        }
+
+        .explore-items-text {
+            padding-top: 15px;
+            border-bottom: 1px solid rgba(112, 112, 112, 0.54);
+            padding-bottom: 20px;
+
+            h3 {
+                font-size: 16px;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                color: $white;
+                margin-bottom: 8px;
+            }
+
+            p {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                color: $white;
+                margin-bottom: 8px;
+
+            }
+
+            h6 {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 700;
+                font-size: 12px;
+                margin-bottom: 0;
+                color: $white;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        span {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 8px;
+            color: $white;
+        }
+    }
+
+    .explore-btn {
+        padding-top: 65px;
+
+        button {
+            height: 78px;
+            width: 36%;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            @include br(42px);
+            border: 1px solid $black;
+            cursor: pointer;
+        }
+    }
+}
+
+//=========Works part css=======//
+
+#works {
+    background: $cosmic-Latte;
+    padding-top: 130px;
+    padding-bottom: 250px;
+
+    .works-header {
+        h3 {
+            font-size: 53px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 75px;
+        }
+    }
+
+    .work-text {
+        padding-top: 55px;
+
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            color: $night-rider;
+            font-size: 42px;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: $charcoal;
+        }
+    }
+
+    .work-img {
+        position: relative;
+
+        .work-img2 {
+            position: absolute;
+            bottom: -26px;
+            right: -30px;
+        }
+    }
+}
+
+//=========Advantages part css=======//
+#advantages {
+    padding-top: 85px;
+    background: $cosmic-Latte;
+    padding-bottom: 125px;
+
+    .advantages-header {
+        h3 {
+            font-size: 53px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 19px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: $nobel;
+            padding-bottom: 30px;
+        }
+    }
+
+    .advantages-items {
+        background: $cosmic-Latte;
+        filter: drop-shadow(0px 0px 7px rgba(112, 112, 112, 0.2));
+        padding: 40px;
+        height: 325px;
+
+        img {}
+
+        h3 {
+            font-size: 21px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            color: $black;
+            padding-top: 18px;
+            margin-bottom: 60px;
+
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: $charcoal;
+            margin-bottom: 0;
+        }
+    }
+}
+
+//=========Testimonials part css=======//
+#testimonials {
+    background: $cosmic-Latte;
+    padding-top: 125px;
+    padding-bottom: 200px;
+
+    .testimonials-header {
+        h3 {
+            font-size: 53px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 100px;
+        }
+    }
+
+    .testimonials-items {
+
+        p {
+            padding-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: $charcoal;
+        }
+    }
+}
+
+//=========footer part css=======//
+#footer {
+    background: $nero;
+    padding-top: 100px;
+    padding-bottom: 180px;
+
+    .footer-text {
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-bottom: 5px;
+            color: $white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+
+    .footer-subscribe {
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            color: $white;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        input {
+            height: 52px;
+            width: 65%;
+            border: 1px solid $nobel;
+            background: $black;
+            @include br(3px);
+            padding-left: 25px;
+            color: $white;
+            padding-right: 10px;
+
+            &::placeholder {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: $white;
+                font-weight: 600;
+            }
+        }
+
+        button {
+            border: 2px solid $white;
+            @include br(3px);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            height: 52px;
+            width: 30%;
+            color: $white;
+        }
+    }
+}
+
+//**==about-us pages part scss start==***//
+
+#about-us {
+    background: $cosmic-Latte;
+    padding-top: 220px;
+    padding-bottom: 100px;
+
+    .about-text {
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            color: $gray;
+        }
+    }
+
+}
+
+//===mission-statement part scss==//
+#mission-statement {
+    padding-top: 100px;
+    background: $cosmic-Latte;
+    padding-bottom: 140px;
+
+    .statement-text {
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            color: $black;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 21px;
+            color: $gray;
+            padding-top: 50px;
+            margin-bottom: 65px;
+        }
+    }
+
+    .whyus-text {
+        padding-top: 185px;
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 21px;
+            color: $gray;
+        }
+    }
+}
+
+//==counter part scss===//
+#counter {
+    background: rgba(13, 65, 83, 0.78);
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    .counter-text {
+        h5 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+
+    .counter-number {
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 45px;
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+//==map part scss===//
+#map {
+
+    .map-responsive {
+        height: 700px;
+        position: relative;
+    }
+
+    .map-content {
+        position: absolute;
+        top: 50%;
+        left: 200px;
+        z-index: 9;
+        transform: translateY(-50%);
+
+
+        .map-text {
+            background: $white;
+            @include br(40px);
+            margin: 10px;
+            filter: drop-shadow(0px 12px 10px rgba(26, 26, 26, 0.61));
+
+            .map-text-header {
+                h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 34px;
+                    font-weight: 700;
+                    color: #585858;
+                }
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 22px;
+                font-weight: 400;
+                color: #8A8A8A;
+            }
+        }
+    }
+}
+
+//***===========singup pages sass start===========****//
+#signup {
+    background: $cosmic-Latte;
+    padding-top: 220px;
+    padding-bottom: 117px;
+
+
+    .signup-from {
+        background: $soft-peach;
+        @include br(40px);
+        filter: drop-shadow(0px 0px 5px rgba(104, 102, 102, 0.4));
+
+        .login-btn {
+            padding-top: 60px;
+            padding-bottom: 40px;
+
+            button {
+                background: none;
+                border: 0;
+                cursor: pointer;
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                text-transform: uppercase;
+                color: $black;
+            }
+        }
+
+
+        .signup-btn {
+            background: #E28538;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            @include border-radius-top-right(40px);
+
+            button {
+                background: none;
+                border: 0;
+                cursor: pointer;
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+
+        .singup-box {
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 35px;
+            padding-bottom: 70px;
+
+            p {
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-size: 26px;
+                margin: 0;
+                color: #535353;
+                padding-bottom: 10px;
+            }
+
+            .singup-as {
+                .form-check {
+                    .form-check-inline {
+                        .form-check-input {}
+                    }
+
+                    label {
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: #999999;
+                    }
+                }
+            }
+
+            .signup-inputbox {
+                padding-top: 30px;
+
+                .form-group {
+                    input {
+                        height: 65px;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+                        font-size: 20px;
+                        color: $black;
+
+                        &:focus {
+                            box-shadow: none !important
+                        }
+
+                        &::placeholder {
+                            font-family: 'Lato', sans-serif;
+                            font-weight: 400;
+                            font-size: 20px;
+                            color: #8A8A8A;
+                        }
+                    }
+                }
+
+                .signup-continue {
+                    padding-top: 30px;
+
+                    button {
+                        height: 65px;
+                        width: 100%;
+                        border: 0;
+                        background: $blue-chill;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+                        font-size: 23px;
+                        text-transform: uppercase;
+                        color: $white;
+                        @include br(40px);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .sigup-icon {
+                padding-top: 50px;
+
+                i {
+                    background: #26A4B9;
+                    height: 75px;
+                    width: 75px;
+                    font-size: 25px;
+                    @include br(50%);
+                    color: $white;
+                    padding-top: 25px;
+                }
+            }
+        }
+    }
+
+    .signup-text {
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            color: $black;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: $gray;
+        }
+    }
+
+    .signup-point {
+        h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 34px;
+            color: $black;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 19px;
+            color: $gray;
+            position: relative;
+            border-left: 6px solid $black;
+            padding-left: 20px;
+
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .navbar .navbar-nav {
+        top: 39px;
+    }
+
+    #banner {
+        padding-top: 215px;
+    }
+
+    #banner .banner-input h3 {
+        font-size: 35px;
+    }
+
+    #banner .banner-input .banner-input-box input {
+        height: 52px;
+        padding-left: 90px
+    }
+
+    #banner .banner-input .banner-input-box button {
+        top: 8px;
+        left: 27px;
+    }
+
+    #banner .banner-input .banner-input-box button::after {
+        right: -16px;
+    }
+
+    #explore .explore-btn button {
+        width: 73%;
+    }
+
+    #explore .explore-header h3 {
+        font-size: 30px;
+    }
+
+    #works .works-header h3 {
+        font-size: 30px;
+    }
+
+    #works .work-img .work-img2 {
+        bottom: -50px;
+        right: -13px;
+    }
+
+    #works .work-img img {
+        width: 100%;
+    }
+
+    #works .work-text h3 {
+        font-size: 34px;
+    }
+
+    #testimonials .testimonials-header h3 {
+        font-size: 40px;
+    }
+
+    #footer {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    /**==about-us pages part responsive start==***/
+    #mission-statement .whyus-text {
+        padding-top: 60px;
+    }
+
+    #counter .counter-number {
+        padding-bottom: 75px;
+    }
+
+    #map .map-content {
+        left: 0;
+        bottom: 70px;
+    }
+
+    //singup pages sass//
+    .navbar .navbar-row {
+        flex-direction: row;
+        top: 1075px;
+        right: 45px;
+    }
+
+    #signup .signup-from .singup-box {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #signup .signup-from .singup-box .sigup-icon i {
+        height: 60px;
+        width: 60px;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar .navbar-nav {
+        top: 39px;
+    }
+
+    #banner {
+        padding-top: 215px;
+    }
+
+    #banner .banner-input h3 {
+        font-size: 35px;
+    }
+
+    #banner .banner-input .banner-input-box input {
+        height: 52px;
+        padding-left: 90px
+    }
+
+    #banner .banner-input .banner-input-box button {
+        top: 14px;
+        left: 27px;
+    }
+
+    #banner .banner-input .banner-input-box button::after {
+        right: -16px;
+    }
+
+    #explore .explore-btn button {
+        width: 73%;
+    }
+
+    #explore .explore-header h3 {
+        font-size: 30px;
+    }
+
+    #works .works-header h3 {
+        font-size: 30px;
+    }
+
+    #works .work-img .work-img2 {
+        bottom: -50px;
+        right: -13px;
+    }
+
+    #works .work-img img {
+        width: 100%;
+    }
+
+    #works .work-text h3 {
+        font-size: 34px;
+    }
+
+    #testimonials .testimonials-header h3 {
+        font-size: 40px;
+    }
+
+    #footer {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    //about-us pages responsive//
+    #counter .counter-number {
+        padding-bottom: 75px;
+    }
+
+    #map .map-content {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 82%;
+        top: 287px;
+
+    }
+
+    //singup pages sass//
+    .navbar .navbar-row {
+        flex-direction: row;
+        top: 1090px;
+        right: 133px;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        top: 87px;
+    }
+
+    #banner {
+        padding-top: 300px;
+    }
+
+    #banner .banner-items h3 {
+        font-size: 25px;
+    }
+
+    #explore .explore-btn button {
+        width: 58%;
+    }
+
+    #works {
+        padding-bottom: 125px;
+    }
+
+    #works .work-text {
+        padding-top: 0px;
+    }
+
+    #works .work-text h3 {
+        font-size: 34px;
+    }
+
+    #works .work-text p {
+        font-size: 17px;
+    }
+
+    #advantages .advantages-items {
+        width: 390px;
+        margin: auto;
+    }
+
+    #testimonials .testimonials-items {
+        width: 378px;
+        margin: auto;
+    }
+
+    #footer .footer-subscribe {
+        margin-top: 70px;
+    }
+
+    #footer {
+        padding-bottom: 125px;
+    }
+
+    //    about-us pages sass//
+    .navbar .navbar-md-row {
+        flex-direction: row;
+        top: 45px;
+    }
+
+    #mission-statement .whyus-text {
+        padding-top: 80px;
+    }
+
+    #mission-statement .whyus-text p {
+        font-size: 16px;
+    }
+
+    #counter .counter-text h5 {
+        font-size: 14px;
+    }
+
+    #map .map-content {
+        width: 45%;
+        left: 60px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
